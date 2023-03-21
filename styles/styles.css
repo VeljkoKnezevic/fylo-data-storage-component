@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  background-image: url(../images/bg-mobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+/* h1 {
+  font-size: clamp(28px, 16px + 2vw, 40px);
+}
+*/
+p {
+  margin: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.left {
+  background: #1e2d69;
+  box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
+  border-radius: 10px 100px 10px 10px;
+  width: 87%;
+  margin-inline: 1.5rem;
+  padding: 2.5rem 0rem 2.5rem 2.5625rem;
+}
+.left__icons {
+  display: flex;
+  margin-block-start: 2.0625rem;
+  gap: 1rem;
+}
+.left__icons__wrapper {
+  background: #0c122c;
+  border-radius: 0.625rem;
+}
+.left__icons .document {
+  padding: 0.75rem 0.875rem;
+}
+.left__icons .folder {
+  padding: 0.875rem 0.75rem;
+}
+.left__icons .upload {
+  padding: 1rem 0.75rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=styles.css.map */

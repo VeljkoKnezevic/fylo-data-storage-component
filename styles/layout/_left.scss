@@ -1,0 +1,33 @@
+@use "../utils/" as u;
+
+.left {
+  background: #1e2d69;
+  box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
+  border-radius: 10px 100px 10px 10px;
+  width: 87%;
+  margin-inline: u.rem(24);
+  padding: u.rem(40) u.rem(0) u.rem(40) u.rem(41);
+
+  &__icons {
+    display: flex;
+    margin-block-start: u.rem(33);
+    gap: u.rem(16);
+
+    &__wrapper {
+      background: #0c122c;
+      border-radius: u.rem(10);
+    }
+
+    .document {
+      padding: u.rem(12) u.rem(14);
+    }
+
+    .folder {
+      padding: u.rem(14) u.rem(12);
+    }
+
+    .upload {
+      padding: u.rem(16) u.rem(12);
+    }
+  }
+}
