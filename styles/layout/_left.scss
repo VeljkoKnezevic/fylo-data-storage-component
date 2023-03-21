@@ -1,12 +1,15 @@
 @use "../utils/" as u;
 
 .left {
-  background: #1e2d69;
+  background: var(--light-blue);
   box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
   border-radius: 10px 100px 10px 10px;
-  width: 87%;
-  margin-inline: u.rem(24);
+  width: 100%;
   padding: u.rem(40) u.rem(0) u.rem(40) u.rem(41);
+
+  @include u.breakpoint(large) {
+    max-width: u.rem(350);
+  }
 
   &__icons {
     display: flex;
@@ -14,7 +17,7 @@
     gap: u.rem(16);
 
     &__wrapper {
-      background: #0c122c;
+      background: var(--dark-blue);
       border-radius: u.rem(10);
     }
 

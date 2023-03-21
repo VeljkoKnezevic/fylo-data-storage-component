@@ -14,13 +14,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <title>Frontend Mentor | Fylo data storage component</title>
   </head>
   <body>
     <main>
+      <h1 class="visuallyhidden">Fylo data storage</h1>
       <div class="container">
         <div class="left">
           <img
@@ -45,8 +46,15 @@
           <p class="right__text">
             You&apos;ve used <span>815 GB</span> of your storage
           </p>
-          <p class="right__bubble"><span>185</span> GB Left</p>
-          <div class="right__bar"></div>
+          <div class="right__bubble">
+            <p class="right__bubble__text--large">185</p>
+            <p class="right__bubble__text--small">GB Left</p>
+          </div>
+          <div class="right__bar">
+            <div class="right__bar--filled">
+              <div class="dot"></div>
+            </div>
+          </div>
           <div class="right__bottom">
             <p>0 GB</p>
             <p>1000 GB</p>

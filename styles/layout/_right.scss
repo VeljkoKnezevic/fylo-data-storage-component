@@ -1,1 +1,133 @@
 @use "../utils/" as u;
+
+.right {
+  background: var(--light-blue);
+  box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
+  border-radius: 10px;
+  width: 100%;
+
+  padding: u.rem(32) u.rem(32) u.rem(52) u.rem(32);
+  position: relative;
+  @include u.breakpoint(large) {
+    margin-block-start: u.rem(41);
+    max-width: u.rem(540);
+    padding: u.rem(40);
+  }
+
+  &__text {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: u.rem(14);
+    line-height: u.rem(16);
+    color: #dbd9ff;
+    text-align: center;
+
+    span {
+      font-weight: 700;
+    }
+
+    @include u.breakpoint(large) {
+      text-align: start;
+    }
+  }
+
+  &__bar {
+    background: rgba(12, 18, 44, 0.5);
+    width: 100%;
+    height: u.rem(20);
+    border-radius: u.rem(10);
+    display: flex;
+    padding: u.rem(3);
+    margin-block-start: u.rem(16);
+
+    &--filled {
+      background: linear-gradient(90deg, #ffa197 0%, #ff4a95 100%);
+      border-radius: u.rem(8);
+      height: u.rem(14);
+      padding: u.rem(2);
+      width: 73.5%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .dot {
+        width: u.rem(10);
+        height: u.rem(10);
+        border-radius: 50%;
+        background-color: var(--white);
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: u.rem(12);
+    line-height: u.rem(14);
+
+    color: #dbd9ff;
+    margin-block-start: u.rem(10);
+
+    @include u.breakpoint(large) {
+      margin-block-start: u.rem(8);
+    }
+  }
+
+  &__bubble {
+    position: absolute;
+    background: var(--white);
+    box-shadow: 0px 75px 100px -30px rgba(0, 0, 0, 0.24776);
+    border-radius: u.rem(10);
+    bottom: u.rem(-36);
+    left: 50%;
+    transform: translate(-50%);
+    padding: u.rem(16) u.rem(24);
+    width: u.rem(179);
+    display: flex;
+    align-items: center;
+    gap: u.rem(5);
+    justify-content: center;
+
+    @include u.breakpoint(large) {
+      bottom: auto;
+      left: auto;
+      transform: none;
+      top: -47px;
+      right: 40px;
+      border-end-end-radius: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -22.5px;
+        right: 0;
+        width: u.rem(22.5);
+        height: u.rem(22.5);
+        border-left: 22px solid transparent;
+        border-right: 22px solid white;
+        border-top: 22px solid white;
+        border-bottom: 22px solid transparent;
+      }
+    }
+
+    &__text {
+      &--small {
+        font-weight: 700;
+        font-size: u.rem(12);
+        line-height: u.rem(14);
+        letter-spacing: u.rem(1);
+        color: rgba(12, 18, 44, 0.5);
+        text-transform: uppercase;
+      }
+      &--large {
+        font-weight: 700;
+        font-size: u.rem(40);
+        line-height: u.rem(40);
+        letter-spacing: u.rem(1);
+        color: var(--dark-blue);
+      }
+    }
+  }
+}
